@@ -28,7 +28,9 @@ The structure of the convolution neural network is specified as:
 The solver takes the responsibility of updating all the learnable parameters in the predefined model, most importantly, the weights and biases. There are four kinds of first-order update methods available: Vanilla SGD, SGD Momentum, RMSprop and Adam. In practice, Adam method usually works the best.Several important parameters to be specified are: initial learning rate, batch size and total number of training epochs. 
 
 ## Demo
-To illustrate how to use this code, two demo samples are provided. Specifically, both full connected neural network and convolution neural network models are individually created to classify the CIFAR10 dataset which is stored in the 'Dataset' folder. You can get a good sense of the usage of this code throught the demo.
+To illustrate how to use this code, two demo samples are provided. Specifically, both full connected neural network and convolution neural network models are individually created to classify the CIFAR10 dataset which is stored in the 'Dataset' folder. You will need to download the CIFAR-10 dataset. To do so, please run the following command from the Dataset directory:
+
+./get_datasets.sh
 
 ## Author
 - **Di Jin** -- jindi15@mit.edu
