@@ -110,8 +110,8 @@ class ConvNet(object):
         W_conv.append(1 + (W_conv[-1] + 2 * pad - Wc) / filter_stride)
       if i != len(num_filters)-1:
         if num_filters[i+1] == 0:
-          H_conv[i] = 1 + (H_conv[i] - Hp) / pool_stride
-          W_conv[i] = 1 + (W_conv[i] - Wp) / pool_stride
+          H_conv[-1] = 1 + (H_conv[-1] - Hp) / pool_stride
+          W_conv[-1] = 1 + (W_conv[-1] - Wp) / pool_stride
           i += 1
           pool_switch.append(1)
         else:
@@ -128,7 +128,7 @@ class ConvNet(object):
         self.params['W'+str(i+1)] = np.random.randn(j, C, Hc, Wc) * weight_scale
         self.params['b'+str(i+1)] = np.zeros(j)
       else:
-        self.params['W'+str(i+1)] = np.random.randn(j, num_filters[i-1], Hc, Wc) * weight_scale
+        self.params['W'+str(i+1)] = np.random.randn(j, num_filters_nonzero[i-1], Hc, Wc) * weight_scale
         self.params['b'+str(i+1)] = np.zeros(j)
         
     for i,j in enumerate(hidden_dim):

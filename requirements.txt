@@ -1,3 +1,4 @@
+Cython==0.25.2
 ipython==4.2.0
 jupyter==1.0.0
 matplotlib==1.5.1
