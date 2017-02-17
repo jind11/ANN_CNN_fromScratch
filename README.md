@@ -32,5 +32,9 @@ To illustrate how to use this code, two demo samples are provided. Specifically,
 
 ./get_datasets.sh
 
+Before using the convolution neural network model, please run the following command from the Model directory:
+
+python setup.py build_ext --inplace
+
 ## Author
 - **Di Jin** -- jindi15@mit.edu
